@@ -6,14 +6,9 @@ local shell = require("shell")
 
 local me
 
-if component.isAvailable("me_controller") then
-    me = component.me_controller
-elseif component.isAvailable("me_interface") then
-    me = component.me_interface
-else
-    print("You need to connect the adapter to either a me controller or a me interface")
-    os.exit()
-end
+
+me = component.me_interface
+
 
 local version = "0.12"
 local working = true
